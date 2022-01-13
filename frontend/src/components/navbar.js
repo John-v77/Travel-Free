@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./navbar.css";
 import { Link, useHistory } from "react-router-dom";
-import TheContext from "../TheContext";
 import actions from "../api";
 import Login from "./Login";
-import axios from "axios";
+
 
 function Navbar(props) {
   const [user, setUser] = useState({});
@@ -40,7 +39,7 @@ function Navbar(props) {
       <div id="Navbar">
         <div style={{ width: "26" }}></div>
         <div class="logo">
-          <h3>WhyNew!</h3>
+          <h3>Travel Free!</h3>
         </div>
         <div class="login">
           <div>

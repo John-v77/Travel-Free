@@ -56,7 +56,6 @@ body {
 /* DESKTOP VERSION STARTING FROM HERE*/
 @media only screen and (min-width: 600px) {
   body {
-    background-color: rgb(181, 226, 241);
-    background-color: powderblue;
+    background-color: #98D2F0;
   }
 }

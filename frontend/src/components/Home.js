@@ -13,31 +13,33 @@ function Home(props) {
       };
 
     return (
-        <>
-            <h2>Check out some of the gently-used items you can find on WhyNew!</h2>
+      
+        <div className='carusel'>
+            <h2>Explore a world of posibilities!</h2>
             <Slider {...settings}>
+      <div>
+      <img className= 'multi-dest' src = './Images/Multi-dest.jpg' alt= 'multiple destinations'/>
+      </div>
       <div >
-        <img className= 'apple' src = './Images/iphone range.jpg' alt= 'apple'/>
+        <img className= 'Tokyo' src = './Images/1-3.jpg' alt= 'Tokyo'/>
       </div>
       <div>
-      <img className= 'samsung' src = './Images/s21transp.png' alt= 'S21'/>
+      <img className= 'Turkey' src = './Images/1-6.jpg' alt= 'Turkey'/>
       </div>
       <div>
-      <img className= 'macbook' src = './Images/macbookairwhtbg.png' alt= 'macbook'/>
+      <img className= 'Albania' src = './Images/1b_Albania.jpg' alt= 'Albania'/>
       </div>
       <div>
-      <img className= 'apple2' src = './Images/iphone12transparent.png' alt= 'apple2'/>
-      </div>
-      {/* <div>
-        <h3>5</h3>
+      <img className= 'Thai' src = './Images/123.jpg' alt= 'Thailan'/>
       </div>
       <div>
-        <h3>6</h3>
-      </div> */}
+      <img className= 'Singapore' src = './Images/1234.jpg' alt= 'Singapore'/>
+      </div>
+      
     </Slider>
 
             
-        </>
+        </div>
     );
 }
 
