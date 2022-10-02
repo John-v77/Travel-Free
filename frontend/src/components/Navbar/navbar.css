@@ -1,59 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
 
 #Navbar {
-  width: 80vw;
+  height: 12rem;
   margin: 0 auto;
-  height: 100px;
-  background-color: blue;
+  background: url('https://www.onlyinyourstate.com/wp-content/uploads/2022/07/Seaside-Lagoon.jpeg');
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0 0 5px 5px;
+}
+
+.nav-firstLine{
+  
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.5rem;
 }
 
-.nav-buttons {
+.nav-secondLine{
+  text-align: right;
+  padding: 10px;
+}
+
+.nav-buttons-new{
+  margin: 0;
+  padding-right: 10px;
+  width: 430px;
   display: flex;
-  justify-content: space-evenly;
-  width: 80vw;
-  margin: 0vw 10vw;
-  padding: 15px 0;
-  background-color: white;
-  border-radius: 0 0 10px 10px;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  justify-content: space-between;
+ font-weight: 500;
 }
 
-.nav-buttons :link {
-  text-decoration: none;
-}
-
-.nav-buttons b {
+.nav-buttons-new a{
   color: black;
 }
-.nav-buttons b:hover {
-  color: #aaafaa;
+
+.nav-buttons-new a:hover,
+.nav-buttons-new a:active{
+  color: white;
 }
 
+
+
+
 .logo {
-  /* font-family: 'PT Sans', sans-serif; */
-  margin: -2vw 8vw 0vw 26vw;
   font-family:'Damion', cursive;
-  font-size: 2.5em;
+  font-size: 2.3rem;
+  margin:0 5px;
+  color: #021a70;
+  /* border: 1px solid; */
 }
 
 .login-btn {
-  margin: 0 20px 0 35px;
-  width: 4.5vw;
-  height: 26px;
+  width: 5rem;
+  padding: 2px;
   background-color: white;
-  border: 2px solid #308efd;
-  color: #308efd;
+  border: 2px solid #106EEC;
+  color: #106EEC;
   border-radius: 7px;
-  margin: 20px 0 10px;
 }
 
 .login-btn:hover {
-  background-color: #4caf50; /* Green */
+  background-color: #106EEC;
   color: white;
-  border: #4caf50;
+  border: 2px solid #106EEC;
+  cursor: pointer;
 }
 
 .searchButton:focus,
@@ -63,18 +73,75 @@
   box-shadow: none;
 }
 
+
+
+.searchTrip input{
+  width: 8rem;
+  height: 20px;
+  border-radius: 0 5px 5px 0;
+  border: 1px solid white;
+  background-color: transparent;
+  border-left: none;
+  font-size: 0.7rem;
+}
+
+.searchTrip input:active{
+  border: 2px solid white;
+}
+
+.searchTrip button{
+  width: 35px;
+  margin: 0;
+  padding: 1px 0 2px 0;
+  border-radius: 5px 0 0 5px;
+  border: 1px solid white;
+  cursor: pointer;
+  background-color: transparent;
+
+}
+
+
+#shoppingCart{
+  padding: 2px 16px 3px;
+  background-color: white;
+  border: 1px solid #aaafaa;
+  border-radius: 5px;
+}
+
+#shoppingCart:hover{
+  background-color: black;
+}
+
+
+.shoppingCart p{
+  font-size: 1.25em;
+}
+
 .searchItems {
-  height: 21px;
+  height: 10px;
+  /* height: 21px;
   border: 1px solid #aaafaa;
   border-right: 0;
   border-radius: 5px 0 0 5px;
   color: #aaafaa;
   font-family: "PT Sans", sans-serif;
-  font-size: 14px;
+  font-size: 14px; */
+}
+
+.searchButton {
+  /* width: 25px;
+  height: 25px;
+  border: 1px solid #aaafaa;
+  background: #aaafaa;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 12px;
+  padding-right: 5px; */
 }
 
 /* it belongs to add items css */
-
+/* 
 .AddForm input {
   height: 21px;
   border: 1px solid #aaafaa;
@@ -90,17 +157,7 @@
   box-shadow: none;
 }
 
-.searchButton {
-  width: 25px;
-  height: 25px;
-  border: 1px solid #aaafaa;
-  background: #aaafaa;
-  color: #fff;
-  border-radius: 0 5px 5px 0;
-  cursor: pointer;
-  font-size: 12px;
-  padding-right: 5px;
-}
+
 
 .login {
   width: 20vw;
@@ -120,4 +177,4 @@
 .search-css {
   display: flex;
   justify-content: space-between;
-}
+} */

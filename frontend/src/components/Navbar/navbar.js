@@ -32,15 +32,41 @@ function Navbar(props) {
   };
 
   return (
-    <>
-      {/* /  Nav Bar */}
+    <div id='Navbar'>
+      <div className='nav-firstLine'>
+        <h3 className='logo'>Travel Free!</h3>
+        <div className='nav-buttons-new'>
+          <Link to='/'>Home</Link>
+          <Link to='/storeFrontDesk'>All Items</Link>
+          <Link to='/add-items'>Add Item</Link>
 
-      <div id='Navbar'>
-        <div style={{ width: '26' }}></div>
-        <div class='logo'>
-          <h3>Travel Free!</h3>
+          <Link to='/shopingCart'>
+            <button
+              id='shopingCart'
+              style={{
+                padding: '2px 16px 3px',
+                margin: '0 10px',
+                backgroundColor: 'white',
+                border: '1px solid #aaafaa',
+                borderRadius: '5px',
+              }}
+            >
+              <i class='fa fa-shopping-cart' style={{ fontSize: '1.2em' }}></i>
+            </button>
+          </Link>
+          <Login />
         </div>
-        <div class='login'>
+      </div>
+      <div className='nav-secondLine'>
+        <form onSubmit={postSearch} className='searchTrip'>
+          <button type='submit' class='searchButton'>
+            <i style={{ color: 'black' }} class='fa fa-search'></i>
+          </button>
+          <input onChange={handleChange} type='text' placeholder=' ...search' />
+        </form>
+      </div>
+
+      {/* <div class='login'>
           <div>
             <Login />
           </div>
@@ -66,27 +92,8 @@ function Navbar(props) {
               </button>
             </Link>
           </div>
-        </div>
-      </div>
-
-      <div className='nav-buttons'>
-        <Link to='/'>
-          <b>
-            <u>Home</u>
-          </b>
-        </Link>
-        <Link to='/storeFrontDesk'>
-          <b>
-            <u>All Items</u>
-          </b>
-        </Link>
-        <Link to='/add-items'>
-          <b>
-            <u>Add Item</u>
-          </b>
-        </Link>
-      </div>
-    </>
+        </div> */}
+    </div>
   );
 }
 

@@ -17,7 +17,7 @@ function Login(props) {
   // Return
 
   return (
-    <div>
+    <div className='login'>
       {!user.email ? (
         <Link to='/auth'>
           <button class='login-btn'>
