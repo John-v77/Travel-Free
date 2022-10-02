@@ -24,7 +24,7 @@
 .nav-buttons-new{
   margin: 0;
   padding-right: 10px;
-  width: 430px;
+  width: 480px;
   display: flex;
   justify-content: space-between;
  font-weight: 500;
@@ -32,6 +32,8 @@
 
 .nav-buttons-new a{
   color: black;
+  text-transform: capitalize;
+  font-size: 0.9rem;
 }
 
 .nav-buttons-new a:hover,
@@ -52,27 +54,18 @@
 
 .login-btn {
   width: 5rem;
-  padding: 2px;
+  padding: 3px;
   background-color: white;
-  border: 2px solid #106EEC;
-  color: #106EEC;
+  border: none;
+  color: #1279F0;
   border-radius: 7px;
 }
 
 .login-btn:hover {
-  background-color: #106EEC;
+  background-color: #1279F0;
   color: white;
-  border: 2px solid #106EEC;
   cursor: pointer;
 }
-
-.searchButton:focus,
-.searchItems:focus,
-.login-btn:focus {
-  outline: none;
-  box-shadow: none;
-}
-
 
 
 .searchTrip input{
@@ -83,6 +76,10 @@
   background-color: transparent;
   border-left: none;
   font-size: 0.7rem;
+}
+
+.searchTrip input[type=text]:focus{
+  outline: 2px solid white; 
 }
 
 .searchTrip input:active{
@@ -97,24 +94,29 @@
   border: 1px solid white;
   cursor: pointer;
   background-color: transparent;
+}
 
+.searchTrip button:hover{
+  background-color: #1279F0;
+  color: white;
 }
 
 
-#shoppingCart{
+#shopingCart{
   padding: 2px 16px 3px;
-  background-color: white;
-  border: 1px solid #aaafaa;
+  background-color: transparent;
+  border: 1px solid white;
   border-radius: 5px;
+  border: none;
 }
 
-#shoppingCart:hover{
-  background-color: black;
+#shopingCart:hover{
+  background-color: #1279F0;
 }
 
-
-.shoppingCart p{
+.fa-shopping-cart{
   font-size: 1.25em;
+  color: white;
 }
 
 .searchItems {

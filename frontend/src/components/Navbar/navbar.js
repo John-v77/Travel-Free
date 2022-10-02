@@ -36,22 +36,13 @@ function Navbar(props) {
       <div className='nav-firstLine'>
         <h3 className='logo'>Travel Free!</h3>
         <div className='nav-buttons-new'>
-          <Link to='/'>Home</Link>
-          <Link to='/storeFrontDesk'>All Items</Link>
-          <Link to='/add-items'>Add Item</Link>
+          <Link to='/'>HOME</Link>
+          <Link to='/storeFrontDesk'>DESTINATIONS</Link>
+          <Link to='/add-items'>ADD PACKAGE</Link>
 
           <Link to='/shopingCart'>
-            <button
-              id='shopingCart'
-              style={{
-                padding: '2px 16px 3px',
-                margin: '0 10px',
-                backgroundColor: 'white',
-                border: '1px solid #aaafaa',
-                borderRadius: '5px',
-              }}
-            >
-              <i class='fa fa-shopping-cart' style={{ fontSize: '1.2em' }}></i>
+            <button id='shopingCart'>
+              <i class='fa fa-shopping-cart'></i>
             </button>
           </Link>
           <Login />
