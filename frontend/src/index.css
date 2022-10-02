@@ -1,6 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
+*{
+  box-sizing: border-box;
+}
+
+
+a{
+  text-decoration: none;
+}
+
 body {
   background-color: black;
   margin: 0;
@@ -14,14 +23,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.navbarcss {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: rgb(49, 128, 29);
-  text-transform: uppercase;
-  border-radius: 50px;
 }
 
 input {

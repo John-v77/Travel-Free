@@ -1,13 +1,10 @@
-/*
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"); */
 @import url('https://fonts.googleapis.com/css2?family=Damion&display=swap');
 
 #Navbar {
   width: 80vw;
-  margin: 0vw 10vw;
+  margin: 0 auto;
   height: 100px;
-  background-color: white;
+  background-color: blue;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   display: flex;
   justify-content: space-around;
