@@ -44,39 +44,43 @@ function AddItem(props) {
   };
 
   return (
-    <>
-      <h3>Add an Item</h3>
+    <div className='addVacantion'>
+      <h3 className='addVacantion-header'>Add an new package</h3>
 
       <form onSubmit={handleSubmit} className='AddForm'>
+        <label for='title'>Title</label>
         <input
           onChange={handleChangeItem}
           type='text'
-          name='item'
-          placeholder='Add an item...'
+          name='title'
+          placeholder='Title'
         />
+        <label for='price'>Price</label>
         <input
           onChange={handleChangePrice}
           type='number'
           name='price'
-          placeholder='This is the price'
+          placeholder='Price'
         />
+        <label for='image'>Image url</label>
         <input
           onChange={handleChangeImage_url}
-          type='text'
+          type='url'
           name='image'
-          placeholder='This is the image'
+          placeholder='Image url'
         />
+        <label for='description'>Description</label>
         <input
           onChange={handleChangeDescription}
           type='textarea'
           name='description'
-          placeholder='...add description'
+          placeholder='Description'
         />
         <button className='buttonadditem'>
           <b>Add item</b>
         </button>
       </form>
-    </>
+    </div>
   );
 }
 

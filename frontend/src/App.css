@@ -1,9 +1,8 @@
 .App {
-  padding-top: 5rem;
   text-align: center;
   background-color: rgb(255, 255, 255);
   max-width: 80vw;
-  min-height: 100vh;
+  min-height: 80vh;
   margin: 3vw auto 4vw auto;
   border-radius: 6px 6px 0 0;
 }
