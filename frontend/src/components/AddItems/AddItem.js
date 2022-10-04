@@ -7,18 +7,22 @@ function AddItem(props) {
   let [price, setPrice] = useState('');
   let [image_url, setImage_url] = useState('');
   let [description, setDescription] = useState('');
+  let [error, setError] = useState(false);
 
   const handleSubmit = (event) => {
     //Send it to the server!
     event.preventDefault();
 
+    if (!item || !price || !image_url || !description) {
+      setError(true);
+      return;
+    }
+
     actions
       .addItem({ item, price, image_url, description }) //
       //Logic for adding a item to data base
-      .then((newItem) => {
-        console.log('new item!', newItem); // reports a succesful process -- as "new Item!" added
-        //Redirect to all-items page
-        props.history.push(`storeFrontDesk`);
+      .then(() => {
+        props.history.push(`destinations`);
       })
       .catch(console.error);
   };
@@ -76,9 +80,10 @@ function AddItem(props) {
           name='description'
           placeholder='Description'
         />
-        <button className='buttonadditem'>
-          <b>Add item</b>
-        </button>
+        <button className='buttonadditem'>Add item</button>
+        <div className='errorMessage'>
+          {error ? 'Field incomplete!!' : null}
+        </div>
       </form>
     </div>
   );

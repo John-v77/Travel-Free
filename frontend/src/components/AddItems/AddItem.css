@@ -29,7 +29,6 @@
 border: 2px solid white;
 border-radius: 3px;
 margin: 4px 0 20px;
-color: floralwhite
 }
 
 .AddForm input:focus{
@@ -46,7 +45,7 @@ text-align: left;
 .buttonadditem{
     width: 100px;
     padding: 5px 10px;
-    margin: 2rem 18px 0 auto;
+    margin: 2rem 0 0 auto;
     background-color: transparent;
     border: 1px solid white;
     color:white;
@@ -60,3 +59,10 @@ text-align: left;
     background-color:#308EFD;
     cursor: pointer;
 }
+
+.errorMessage{
+    font-weight: 500;
+    color: red;
+    margin: 20px 0;
+  }
+  
