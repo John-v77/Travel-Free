@@ -51,6 +51,7 @@ function Navbar(props) {
         </div>
       </div>
       <div className='nav-secondLine'>
+        {/* <p>{user ? `Welcome back ${user.given_name}` : null}</p> */}
         <form onSubmit={postSearch} className='searchTrip'>
           <button type='submit' class='searchButton'>
             <i style={{ color: 'black' }} class='fa fa-search'></i>
@@ -58,34 +59,6 @@ function Navbar(props) {
           <input onChange={handleChange} type='text' placeholder=' ...search' />
         </form>
       </div>
-
-      {/* <div class='login'>
-          <div>
-            <Login />
-          </div>
-          <div className='search-css'>
-            <form onSubmit={postSearch}>
-              <input
-                onChange={handleChange}
-                type='text'
-                class='searchItems'
-                placeholder=' ...search'
-              />
-              <button type='submit' class='searchButton'>
-                <i style={{ color: 'black' }} class='fa fa-search'></i>
-              </button>
-            </form>
-
-            <Link to='/shopingCart'>
-              <button style={{ padding: '0.01vw 1vw', margin: '0 10px' }}>
-                <i
-                  class='fa fa-shopping-cart'
-                  style={{ fontSize: '1.2em' }}
-                ></i>
-              </button>
-            </Link>
-          </div>
-        </div> */}
     </div>
   );
 }

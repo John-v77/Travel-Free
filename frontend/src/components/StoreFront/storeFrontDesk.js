@@ -149,11 +149,7 @@ function StoreFrontDesk(props) {
 
   return (
     <div className='destinations'>
-      {items[0] ? (
-        <h2> Hot deals !! </h2>
-      ) : (
-        <h3>There are no deals available</h3>
-      )}
+      {items[0] ? <h2> Hot deals!</h2> : <h3>There are no deals available</h3>}
       <div>
         <div className='sortig-btns-destinations'>
           {items[0] ? (
