@@ -1,13 +1,15 @@
-/* @import url("https://allfont.net/allfont.css?fonts=deftone-stylus");
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"); */
+
+.carusel{
+  padding-top:  4rem;
+}
 
 .carusel img{
   width: 50%;
   margin-left: 25%;
-  margin-top: 7rem;
+  margin-top: 3rem;
   margin-bottom: 7rem;
 }
+
 
 #logo {
   font-size: 2.4em;
@@ -15,3 +17,5 @@
   justify-content: space-around;
   padding-top: 4vh;
 }
+
+
