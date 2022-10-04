@@ -8,7 +8,6 @@ function Login(props) {
   const { user, setUser, history } = useContext(TheContext);
   console.log(user);
   const logOut = () => {
-    console.log('hello');
     setUser({});
     localStorage.clear();
     history.push('/');
@@ -18,22 +17,15 @@ function Login(props) {
 
   return (
     <div className='login'>
-      {!user.email ? (
-        <Link to='/auth'>
-          <button class='login-btn'>
-            <b>Login</b>
-          </button>
-        </Link>
+      {user.email ? (
+        <button onClick={logOut} class='login-btn'>
+          Logout
+        </button>
       ) : (
-        <p style={{ color: 'grey' }}>{user.given_name}</p>
+        <Link to='/auth'>
+          <button class='login-btn'> Login</button>
+        </Link>
       )}
-      <span>
-        {user.email ? (
-          <button onClick={logOut}>
-            <b>Logout</b>
-          </button>
-        ) : null}
-      </span>
     </div>
   );
 }
