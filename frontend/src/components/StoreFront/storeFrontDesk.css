@@ -1,55 +1,117 @@
-@media only screen and (min-width: 600px) {
- 
+.destinations{
+  width: 100%;
+  padding: 4rem 0;
+  /* background-color: antiquewhite; */
+}
+
+.All-items-display{
+  width: 100%;  
+  padding: 0 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+  }
 
 
 .search-item,
-.item-box{
-    width: 20vw;
-    height: 28vw;
-    margin: 2vw;
-    border: 2px solid #e8ebe8;
-    border-radius: 6px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-
-}
-
-
-.All-items-display{
-    padding-left:1.3rem;
-    
+.item-container{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: baseline;
-    align-content: space-around;
-  
-  }
-
-  /* .Display-Grid */
-
-  .Sort-btn-AllItems{
-    border:2px solid #308EFD;
-    background-Color:white;
-    color:#308EFD;
-    border-Radius:6px;
-    padding:3px 15px;
-  }
-
-  .Sort-btn-AllItems:hover {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    border: 2px solid #4CAF50;
-  }
-
-
-
-
-
-
-
-
-  
-
-/* Do not type under this line */
+    flex-direction: column;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    border: 1px solid #e8ebe8;
+    
 }
+
+
+.search-item img,
+.item-container img{
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  max-height: 18rem;
+   border-radius: 6px 6px 0 0;
+}
+
+.package-details{
+  padding: 0.5rem;
+  /* background-color: antiquewhite; */
+}
+
+
+.all-items-btn-container{
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.all-items-btn-container button{
+  width: 5rem;
+  padding: 3px;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+.buy-btn-destinations{
+  width: 5rem;
+  padding: 3px;
+  background-color: white;
+  border: 2px solid #1279F0;
+  color: #1279F0;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+.buy-btn-destinations:hover{
+  background-color: #4CAF50;
+  border: 2px solid #4CAF50;
+  color: white;
+}
+
+
+
+.delete-btn-destinations{
+  width: 5rem;
+  padding: 3px;
+  background-color: white;
+  border: 2px solid #fa556b;
+  color: #fa556b;
+  border-radius: 7px;
+}
+
+.delete-btn-destinations:hover{
+  background-color: #fa556b;
+  border: 2px solid #fa556b;
+  color: white;
+}
+
+
+
+
+.sortig-btns-destinations{
+  text-align: right;
+  padding: 10px 5%;
+}
+
+
+.btn-sort-by-price{
+  width: 5rem;
+  padding: 3px;
+  background-color: white;
+  border: 2px solid #1279F0;
+  color: #1279F0;
+  border-radius: 7px;
+  font-weight: 600;
+}
+
+
+.btn-sort-by-price:hover{
+  background-color: #1279F0;
+  border: 2px solid #1279F0;
+  color: white;
+}
+
+
+
+

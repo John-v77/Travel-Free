@@ -2,13 +2,55 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import actions from '../../api';
 import './storeFrontDesk.css';
-import './storeFrontDesk-Mobile.css';
+// import './storeFrontDesk-Mobile.css';
 
 function StoreFrontDesk(props) {
+  const mockItems = [
+    {
+      image_url:
+        'https://www.gardeningknowhow.com/wp-content/uploads/2020/11/seaside-plants.jpg',
+      description: 'Vacantion',
+      item: 'Venice',
+      price: 2000,
+    },
+    {
+      image_url:
+        'https://sandpipervacationrentals.com/wp-content/uploads/2020/08/38.-Seaside-3-e1598648487698-1800x700.jpg',
+      description: 'Vacantion',
+      item: 'Venice',
+      price: 1000,
+    },
+    {
+      image_url:
+        'https://media.architecturaldigest.com/photos/56748938b313ecbd181132dc/master/w_4691,h_3000,c_limit/beach-house-designs-seaside-living-book-08.jpg',
+      description: 'Vacantion',
+      item: 'Venice',
+      price: 3000,
+    },
+    {
+      image_url:
+        'https://img.freepik.com/premium-photo/seaside-summer-beach-with-starfish-shells-coral-sandbar-blur-sea-background-concept-summertime-beach-vintage-color-tone_1484-943.jpg?w=2000',
+      description: 'Vacantion',
+      item: 'Venice',
+      price: 5000,
+    },
+    {
+      image_url:
+        'https://content.phuket101.net/wp-content/uploads/20190703223959/palm-seaside.jpg',
+      description: 'Vacantion',
+      item: 'Venice',
+      price: 6000,
+    },
+    {
+      image_url: 'https://static.toiimg.com/photo/77974615.cms',
+      description: 'Vacantion',
+      item: 'Venice',
+      price: 1000,
+    },
+  ];
+
   const [items, setItems] = useState([]);
   const [sortBtn, setSortBtn] = useState(false);
-  // let valToExport = shoppingCart;
-  //  export valToExport
 
   useEffect(() => {
     actions
@@ -38,30 +80,15 @@ function StoreFrontDesk(props) {
     }
 
     props.setShoppingCart(newObject);
-
-    // let newCart = [...props.shoppingCart]
-    //     newCart.push(item)
-    //   props.setShoppingCart(newCart)
-    //   console.log(props.shoppingCart)
   };
-
-  //  const modifyItem = (itemID) =>{
-  //      actions.modifyItem(itemID)
-
-  //  }
 
   const showItems = () => {
     return items.map((eachItem) => {
       return (
-        <div key={eachItem._id} class='item-box'>
-          <div style={{ padding: '1vw' }}>
-            <img
-              src={eachItem.image_url}
-              alt='product picture'
-              style={{ width: '15vw', height: '15vw', borderRadius: '6px' }}
-            />
-          </div>
-          <div>
+        <div key={eachItem._id} class='item-container'>
+          <img src={eachItem.image_url} alt='product picture' />
+
+          <div className='package-details'>
             <Link
               style={{ color: 'black' }}
               to={`/ItemDetails/${eachItem._id}`}
@@ -72,21 +99,18 @@ function StoreFrontDesk(props) {
             <p>{eachItem.description}</p>
           </div>
 
-          <div
-            className='all-items-btn-container'
-            style={{
-              marginBottom: '2vh',
-              display: 'flex',
-              justifyContent: 'flex-end',
-            }}
-          >
-            <button onClick={(e) => addItemToShopping(eachItem)}>buy</button>
-            {/* <button onClick={(e) => modifyItem(eachItem._id)} >modify</button> */}
+          <div className='all-items-btn-container'>
             <button
               onClick={(e) => deleteItem(eachItem._id)}
-              className='del-Btn-StoreFront'
+              className='delete-btn-destinations'
             >
               delete
+            </button>
+            <button
+              onClick={(e) => addItemToShopping(eachItem)}
+              className='buy-btn-destinations'
+            >
+              buy
             </button>
           </div>
         </div>
@@ -124,27 +148,25 @@ function StoreFrontDesk(props) {
   };
 
   return (
-    <div>
-      <h2>Hot deals !!</h2>
+    <div className='destinations'>
+      {items[0] ? (
+        <h2> Hot deals !! </h2>
+      ) : (
+        <h3>There are no deals available</h3>
+      )}
       <div>
-        <button onClick={(e) => sortItems(e)} className='Sort-btn-AllItems'>
-          <b>sort by price</b>
-        </button>
+        <div className='sortig-btns-destinations'>
+          {items[0] ? (
+            <button onClick={(e) => sortItems(e)} className='btn-sort-by-price'>
+              Price
+            </button>
+          ) : null}
+        </div>
+        {/* <button onClick={(e) => sortItems(e)} className='sort-btn-AllItems1'>
+          sort by price
+        </button> */}
       </div>
-      <div className='All-items-display'>
-        {/* <div style={{width:'15vw', height:'15vw', borderRadius:'6px', backgroundColor: "red"}}></div>
-                <div style={{width:'15vw', height:'15vw', borderRadius:'6px', backgroundColor: "red"}}></div>
-                <div style={{width:'15vw', height:'15vw', borderRadius:'6px', backgroundColor: "red"}}></div>
-                <div style={{width:'15vw', height:'15vw', borderRadius:'6px', backgroundColor: "red"}}></div>
-                <div style={{width:'15vw', height:'15vw', borderRadius:'6px', backgroundColor: "red"}}></div>
-                <div style={{width:'15vw', height:'15vw', borderRadius:'6px', backgroundColor: "red"}}></div>
-                <div style={{width:'15vw', height:'15vw', borderRadius:'6px', backgroundColor: "red"}}></div>
-                <div style={{width:'15vw', height:'15vw', borderRadius:'6px', backgroundColor: "red"}}></div> */}
-        {/* <h3>All Items</h3> */}
-        {/* <div class="Display-Grid"> */}
-        {showItems()}
-        {/* </div> */}
-      </div>
+      <div className='All-items-display'>{showItems()}</div>
     </div>
   );
 }
