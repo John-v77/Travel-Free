@@ -34,10 +34,12 @@ function Navbar(props) {
   return (
     <div id='Navbar'>
       <div className='nav-firstLine'>
-        <h3 className='logo'>Travel Free!</h3>
+        <Link to='/'>
+          <h3 className='logo'>Travel Free!</h3>
+        </Link>
         <div className='nav-buttons-new'>
           <Link to='/'>HOME</Link>
-          <Link to='/storeFrontDesk'>DESTINATIONS</Link>
+          <Link to='/destinations'>DESTINATIONS</Link>
           <Link to='/add-items'>ADD PACKAGE</Link>
 
           <Link to='/shopingCart'>

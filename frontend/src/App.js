@@ -53,7 +53,7 @@ function App() {
           <Route exact path='/' render={(props) => <Home {...props} />} />
           <Route
             exact
-            path='/storeFrontDesk'
+            path='/destinations'
             render={(props) => (
               <StoreFrontDesk
                 {...props}
