@@ -15,60 +15,21 @@ function ShopingCart(props) {
     let len = Object.keys(itemsToBuy).length === 0;
     // console.log('items to buy', len)
 
-    return len
+    return itemsToBuy[0]
       ? 'Shopping Cart is Empty'
       : Object.keys(itemsToBuy).map((each, i) => {
           return (
             <div className='check-out-items' key={each}>
-              <img src={itemsToBuy[each].image_url} alt='picture' />
-              <h5>{itemsToBuy[each].name}</h5>
-              <div style={{ textJustify: 'left' }}>
-                <p>${itemsToBuy[each].price}</p>
+              <div>
+                <img src={itemsToBuy[each].image_url} alt='picture' />
               </div>
-              <div style={{ display: 'flex' }}>
-                <p> Qty: {itemsToBuy[each].qty} </p>
-                {/* <button onClick={(e) => addToCart(itemsToBuy[each]._id)} > + </button>
-                             <button onClick={(e) => removeFromCart(itemsToBuy[each])} > - </button> */}
-              </div>
-              <div>Total: ${itemsToBuy[each].qty * itemsToBuy[each].price}</div>
+              <p>{itemsToBuy[each].name}</p>
+              <p> Qty: {itemsToBuy[each].qty} </p>
+              <p>${itemsToBuy[each].price}</p>
+              <p>${itemsToBuy[each].qty * itemsToBuy[each].price}</p>
             </div>
           );
         });
-
-    // for (const each in itemsToBuy){
-
-    //     console.log('loop', itemsToBuy[each])
-    // return(
-    //     <div className="check-out-items" key={each}>
-    //                  <img src={itemsToBuy[each].image_url} alt='picture'/>
-    //                  <h5>{itemsToBuy[each].name}</h5>
-    //                  <div style={{textJustify:'left'}}><p>${itemsToBuy[each].price}</p></div>
-    //                  <div style={{display:'flex'}}>
-    //                  <p> Qty: {itemsToBuy[each].qty} </p>
-    //                  {/* <button onClick={(e) => addToCart(itemsToBuy[each]._id)} > + </button>
-    //                  <button onClick={(e) => removeFromCart(itemsToBuy[each])} > - </button> */}
-    //                  </div>
-    //                  <div>Total: ${itemsToBuy[each].qty * itemsToBuy[each].price}</div>
-    //     </div>
-
-    // )
-    // }
-    // return itemsToBuy.map(eachE => {
-    //     return(
-
-    //         <div className="check-out-items" key={eachE._id}>
-    //             <img src={eachE.image_url} alt='picture'/>
-    //             <h5>{eachE.item}</h5>
-    //             <div style={{textJustify:'left'}}><p>${eachE.price}</p></div>
-    //             <div style={{display:'flex'}}>
-    //             <p> Qty: 1 </p>
-    //             {/* <button onClick={(e) => addToCart(eachE._id)} > + </button>
-    //             <button onClick={(e) => removeFromCart(eachE)} > - </button> */}
-    //             </div>
-    //             <p>Total:{1*eachE.price}</p>
-    //         </div>
-    //     )
-    // })
   };
 
   const showCheckOut = () => {
@@ -81,10 +42,8 @@ function ShopingCart(props) {
 
     return (
       <div className='check-out-final'>
-        <div style={{ width: '23vw' }}>
-          <h5 className='positionCenter'>Grand Total: ${grandTotal}</h5>
-        </div>
-        <button className='buy-btn-final'>Proceed to check out</button>
+        <h5 className='positionCenter'>Grand Total: ${grandTotal}</h5>
+        {/* <button className='buy-btn-final'>Check out</button> */}
       </div>
     );
   };
@@ -94,9 +53,15 @@ function ShopingCart(props) {
   // }
 
   return (
-    <div style={{ display: 'flex' }}>
+    <div className='checkout-table'>
+      <div className='table-head-checkout'>
+        <p>Product</p>
+        <p>Description</p>
+        <p>Quantity</p>
+        <p>Price</p>
+        <p>Total</p>
+      </div>
       <div className='ShoppingCart-main'>{showItems()}</div>
-
       {showCheckOut()}
     </div>
   );
