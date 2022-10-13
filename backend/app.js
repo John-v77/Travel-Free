@@ -1,44 +1,39 @@
-require('dotenv').config()
-const mongoose = require('mongoose')
-const express = require('express')
-const cors = require('cors')
+require('dotenv').config();
+const mongoose = require('mongoose');
+const express = require('express');
+const cors = require('cors');
 const bodyParser = require('body-parser');
-const path = require('path')
-const app = express()
+const path = require('path');
+const app = express();
 
-
-const MONGODB_URI = process.env.MONGODB_URI || `mongodb://localhost/localWhyNew`
+const MONGODB_URI =
+  process.env.MONGODB_URI_J || `mongodb://localhost/localWhyNew`;
 
 mongoose
-    .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then((x) => console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`))
-    .catch((err) => console.error('Error connecting to mongo', err));
-
-
-
+  .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then((x) =>
+    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+  )
+  .catch((err) => console.error('Error connecting to mongo', err));
 
 app.use(
-    cors({
-        credentials: true,
-        origin: ["http://localhost:3000"] //Swap this with the client url 
-    })
+  cors({
+    credentials: true,
+    origin: ['http://localhost:3000', 'https://why-new.herokuapp.com/'], //Swap this with the client url
+  })
 );
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(express.static(path.join(__dirname, '../frontend/build')))
+app.use(express.static(path.join(__dirname, '../frontend/build')));
 
+app.use('/api', require('./routes'));
 
-app.use('/api', require('./routes'))
-
-
-const PORT = process.env.PORT || 5000
-
+const PORT = process.env.PORT || 5000;
 
 // app.get('*', (req, res, next) => {
 //     res.sendFile(path.join(__dirname, '../frontend/build/index.html'))
 // })
 
-
-app.listen(PORT, () => console.log(`Listening to port ${PORT}`))
+app.listen(PORT, () => console.log(`Listening to port ${PORT}`));
