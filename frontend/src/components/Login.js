@@ -18,12 +18,12 @@ function Login(props) {
   return (
     <div className='login'>
       {user.email ? (
-        <button onClick={logOut} class='login-btn'>
+        <button onClick={logOut} className='login-btn'>
           Logout
         </button>
       ) : (
         <Link to='/auth'>
-          <button class='login-btn'> Login</button>
+          <button className='login-btn'> Login</button>
         </Link>
       )}
     </div>

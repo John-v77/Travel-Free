@@ -85,7 +85,7 @@ function StoreFrontDesk(props) {
   const showItems = () => {
     return items.map((eachItem) => {
       return (
-        <div key={eachItem._id} class='item-container'>
+        <div key={eachItem._id} className='item-container'>
           <img src={eachItem.image_url} alt='product picture' />
 
           <div className='package-details'>

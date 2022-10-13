@@ -44,7 +44,7 @@ function Navbar(props) {
 
           <Link to='/shopingCart'>
             <button id='shopingCart'>
-              <i class='fa fa-shopping-cart'></i>
+              <i className='fa fa-shopping-cart'></i>
             </button>
           </Link>
           <Login />
@@ -53,8 +53,8 @@ function Navbar(props) {
       <div className='nav-secondLine'>
         {/* <p>{user ? `Welcome back ${user.given_name}` : null}</p> */}
         <form onSubmit={postSearch} className='searchTrip'>
-          <button type='submit' class='searchButton'>
-            <i style={{ color: 'black' }} class='fa fa-search'></i>
+          <button type='submit' className='searchButton'>
+            <i style={{ color: 'black' }} className='fa fa-search'></i>
           </button>
           <input onChange={handleChange} type='text' placeholder=' ...search' />
         </form>
