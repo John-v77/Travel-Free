@@ -7,7 +7,7 @@ const path = require('path');
 const app = express();
 
 const MONGODB_URI =
-  process.env.MONGODB_URI_J || `mongodb://localhost/localWhyNew`;
+  process.env.MONGODB_URI_J || `mongodb://localhost/travel_free`;
 
 mongoose
   .connect(MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -19,7 +19,7 @@ mongoose
 app.use(
   cors({
     credentials: true,
-    origin: ['http://localhost:3000', 'https://why-new.herokuapp.com/'], //Swap this with the client url
+    origin: ['http://localhost:3000', 'https://travel-free3.herokuapp.com/'], //Swap this with the client url
   })
 );
 
